@@ -1,0 +1,186 @@
+:root {
+
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Verydarkblue: hsl(217, 54%, 11%);
+    --Verydarkblue: hsl(216, 50%, 16%);
+    --Verydarkblue: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Verydarkblue);
+    background-repeat: no-repeat;
+    background-size: container;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.container {
+    background-color: var(--Verydarkblue);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main_content {
+    width: 100%;
+    height: 100%;
+    display: contents;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.main_imagen {
+    flex: 1;
+    max-width: 100%;
+    min-height: 300px;
+    background-image: url(/images/image-equilibrium.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.main_imagen:hover {
+    background-image: url(/images/icon-view.svg), url(/images/image-equilibrium.jpg);
+    background-color: var(--Cyan);
+    background-position: center center,center center;
+    background-repeat: no-repeat no-repeat;
+    background-size: 20%,cover;
+    cursor: pointer;
+}
+
+.main_title {
+    color: var(--White);
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+.main_title:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.main_paragraph {
+    color: var(--Softblue);
+    font-size: 15px;
+    padding-top: 25px;
+}
+
+.main_subtitle {
+    color: var(--Cyan);
+    font-size: 15px;
+    position: absolute;
+    padding-top: 30px;
+}
+
+.main_date {
+    position: absolute;
+    padding: 0em 13.5em;
+    padding-top: 30px;
+}
+
+.main_usua {
+    margin-top: 80px;
+}
+
+.main_user {
+    font-size: 12px;
+    position: absolute;
+    padding: 1em 4em;
+}
+
+.main_nombre {
+    text-decoration: none;
+    color: var(--White);
+}
+
+.main_nombre:hover {
+    color: var(--Cyan);
+}
+
+.main_date+.main_usua {
+    border-top: 1px solid var(--Softblue);
+    padding-top: 10px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+}
+
+.persona {
+    color: blue;
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 80%;
+        max-width: 375px;
+        border-radius: 10px;
+        flex-direction: column;
+        align-items: stretch;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main_imagen {
+        min-height: 300px;
+        border-radius: 10px;
+        background-size: cover;
+    }
+
+    .main_title {
+        font-size: 20px;
+    }
+
+    .main_subtitle {
+        font-size: 12px;
+    }
+
+    .main_paragraph {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .main_date {
+        font-size: 12px;
+        position: absolute;
+        padding: 0em 8em;
+        padding-top: .5px;
+        margin-top: 30px;
+    }
+
+    .main_usua {
+        margin-top: 90px;
+    }
+
+    .main_user {
+        font-size: 12px;
+        position: absolute;
+        padding: 0 4em;
+        margin-top: 15px;
+    }
+
+    .attribution {
+        position: fixed;
+        text-align: right;
+    }
+}
